@@ -1,0 +1,32 @@
+## Client Credentials
+
+POST http://localhost:5000/connect/token
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic client 511536EF-F270-4058-80CA-1C89C192F69A
+
+scope=api1
+&grant_type=client_credentials
+
+## Authorisation Code
+
+###
+
+GET http://localhost:5000/connect/authorize?client_id=mvc
+&response_type=code
+&scope=openid
+&redirect_uri=http%3A%2F%2Flocalhost%3A5002/callback
+&state=state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601
+
+###
+
+@code = bbbb4252b14be519fb7b2dcc82fc922c6fae646810097fb33526ef26a4c40cea
+
+POST http://localhost:5000/connect/token
+accept: application/json
+authorization: Basic mvc 49C1A7E1-0C79-4A89-A3D6-A37998FB86B0
+content-type: application/x-www-form-urlencoded
+
+grant_type=authorization_code
+&redirect_uri=http%3A%2F%2Flocalhost%3A5002/callback
+&code={{code}}
+

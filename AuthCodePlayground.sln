@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# 
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7A1F972D-AE00-46DF-9D32-5B03DEEFF068}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.AuthServer", "src\Demo.AuthServer\Demo.AuthServer.csproj", "{B57E1C60-44FA-46A9-A178-700CA4C61D64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.WebApp", "src\Demo.WebApp\Demo.WebApp.csproj", "{06B8CC79-C758-4886-82C6-E3BA6530D770}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B57E1C60-44FA-46A9-A178-700CA4C61D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B57E1C60-44FA-46A9-A178-700CA4C61D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B57E1C60-44FA-46A9-A178-700CA4C61D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B57E1C60-44FA-46A9-A178-700CA4C61D64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B8CC79-C758-4886-82C6-E3BA6530D770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B8CC79-C758-4886-82C6-E3BA6530D770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B8CC79-C758-4886-82C6-E3BA6530D770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B8CC79-C758-4886-82C6-E3BA6530D770}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B57E1C60-44FA-46A9-A178-700CA4C61D64} = {7A1F972D-AE00-46DF-9D32-5B03DEEFF068}
+		{06B8CC79-C758-4886-82C6-E3BA6530D770} = {7A1F972D-AE00-46DF-9D32-5B03DEEFF068}
+	EndGlobalSection
+EndGlobal
