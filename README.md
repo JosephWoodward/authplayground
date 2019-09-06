@@ -37,10 +37,7 @@ Steps:
 
 1. Launch IdentityServer
 2. Navigate to `http://localhost:5002/login` and login with username `joe` and password `letmein`:
-
-3. Copy [code from callback](https://github.je-labs.com/joseph-woodward/authplayground/blob/master/src/Demo.WebApp/Controllers/CallbackController.cs#L25) (you'll need to use debugger to get response, or copy it from callback parameters)
-
-4. Copy/run HTTP request presented in view, or run the following request (with your code replaced):
+3. Copy/run HTTP request presented in view, or run the following request (with your code replaced):
 
 ```http
 @code = bbbb4252b14be519fb7b2dcc82fc922c6fae646810097fb33526ef26a4c40cea
@@ -54,7 +51,7 @@ grant_type=authorization_code
 &redirect_uri=http%3A%2F%2Flocalhost%3A5002/callback
 &code={{code}}
 ```
-5. Yay, you've got your access code
+4. Yay, you've got your access code
 
 
 ## Authorisation Code (With PKCE)

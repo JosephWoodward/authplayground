@@ -22,18 +22,21 @@ namespace Demo.WebApp.Controllers
         {
             _logger.LogDebug("Callback response", request);
 
-/*
             var client = new HttpClient();
-            var response = await client.RequestAuthorizationCodeTokenAsync(new AuthorizationCodeTokenRequest
+            var response = await client.RequestTokenAsync(new TokenRequest
             {
-                Code = request.Code,
-                ClientId = "mvc",
-                ClientSecret = "49C1A7E1-0C79-4A89-A3D6-A37998FB86B0".Sha256(),
-                Address = "http://localhost:5000/connect/token",
-                RedirectUri = "http://localhost:5002/callback",
-                GrantType = "code"
+                Address = "https://demo.identityserver.io/connect/token",
+                GrantType = "custom",
+
+                ClientId = "client",
+                ClientSecret = "secret",
+
+                Parameters =
+                {
+                    { "custom_parameter", "custom value"},
+                    { "scope", "api1" }
+                }
             });
-*/
 
             return View(request);
         }
