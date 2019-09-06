@@ -1,5 +1,16 @@
 # Auth / IdentityServer 4 Playground
 
+1. Install latest .NET Core preview (if you don't already have it)
+
+```bash
+$ dotnet tool install --global InstallSdkGlobalTool
+```
+
+2. Run the below from this directory to download/start install of the version of .NET the `global.json` file:
+```bash
+$ dotnet install-sdk
+```
+
 ## Client Credentials
 
 Steps:
