@@ -15,7 +15,7 @@ scope=api1
 
 ## Authorisation Code (Without PKCE)
 
-Copy code from callback (you'll need to use debugger to get response, or copy it from callback parameters)
+Copy [code from callback](https://github.je-labs.com/joseph-woodward/authplayground/blob/master/src/Demo.WebApp/Controllers/CallbackController.cs#L25) (you'll need to use debugger to get response, or copy it from callback parameters)
 
 ```http
 @code = bbbb4252b14be519fb7b2dcc82fc922c6fae646810097fb33526ef26a4c40cea
