@@ -27,7 +27,7 @@ Steps:
 
 3. Copy [code from callback](https://github.je-labs.com/joseph-woodward/authplayground/blob/master/src/Demo.WebApp/Controllers/CallbackController.cs#L25) (you'll need to use debugger to get response, or copy it from callback parameters)
 
-4. Run the following request (with your code replaced):
+4. Copy/run HTTP request presented in view, or run the following request (with your code replaced):
 
 ```http
 @code = bbbb4252b14be519fb7b2dcc82fc922c6fae646810097fb33526ef26a4c40cea
