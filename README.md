@@ -1,5 +1,7 @@
 # Auth / IdentityServer 4 Playground
 
+## Setup
+
 1. Install latest .NET Core preview (if you don't already have it)
 
 ```bash
