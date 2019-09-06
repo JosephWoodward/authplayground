@@ -1146,3 +1146,319 @@ System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address 
 2019-09-06 05:28:39.600 +01:00 [DBG] Secret validators could not validate secret
 2019-09-06 05:28:39.601 +01:00 [INF] {"ClientId":"mvc","Category":"Authentication","Name":"Client Authentication Failure","EventType":"Failure","Id":1011,"Message":"Invalid client secret","ActivityId":"0HLPIFNI4J9OS:00000001","TimeStamp":"2019-09-06T04:28:39.0000000Z","ProcessId":7308,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationFailureEvent"}
 2019-09-06 05:28:39.601 +01:00 [ERR] Client secret validation failed for client: mvc.
+2019-09-06 05:57:31.020 +01:00 [INF] Starting IdentityServer4 version 2.5.0.0
+2019-09-06 05:57:31.066 +01:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-09-06 05:57:31.075 +01:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2019-09-06 05:57:31.075 +01:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2019-09-06 05:57:31.075 +01:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2019-09-06 05:57:31.075 +01:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2019-09-06 05:57:31.075 +01:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2019-09-06 05:57:31.075 +01:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2019-09-06 05:57:35.548 +01:00 [DBG] Login Url: /Account/Login
+2019-09-06 05:57:35.550 +01:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-09-06 05:57:35.550 +01:00 [DBG] Logout Url: /Account/Logout
+2019-09-06 05:57:35.550 +01:00 [DBG] ConsentUrl Url: /consent
+2019-09-06 05:57:35.550 +01:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-09-06 05:57:35.551 +01:00 [DBG] Error Url: /home/error
+2019-09-06 05:57:35.551 +01:00 [DBG] Error Id Parameter: errorId
+2019-09-06 05:57:35.611 +01:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-09-06 05:57:35.624 +01:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-09-06 05:57:35.624 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-09-06 05:57:35.628 +01:00 [DBG] Start authorize request
+2019-09-06 05:57:35.641 +01:00 [DBG] User in authorize request: joe
+2019-09-06 05:57:35.647 +01:00 [DBG] Start authorize request protocol validation
+2019-09-06 05:57:35.664 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 05:57:35.678 +01:00 [DBG] Checking for PKCE parameters
+2019-09-06 05:57:35.680 +01:00 [DBG] No PKCE used.
+2019-09-06 05:57:35.714 +01:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-09-06 05:57:35.729 +01:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","AllowedRedirectUris":["http://localhost:5002/callback"],"SubjectId":"joe","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"a903b5596c033b1deefd417ae9c08991","Raw":{"client_id":"mvc","response_type":"code","scope":"openid","redirect_uri":"http://localhost:5002/callback","state":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601"},"$type":"AuthorizeRequestValidationLog"}
+2019-09-06 05:57:35.747 +01:00 [DBG] IsActive called from: AuthorizeEndpoint
+2019-09-06 05:57:35.763 +01:00 [DBG] user_consent grant with value: mvc|joe not found in store.
+2019-09-06 05:57:35.764 +01:00 [DBG] Found no prior consent from consent store, consent is required
+2019-09-06 05:57:35.764 +01:00 [INF] Showing consent: User has not yet consented
+2019-09-06 05:57:35.985 +01:00 [DBG] Start authorize request protocol validation
+2019-09-06 05:57:35.986 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 05:57:35.986 +01:00 [DBG] Checking for PKCE parameters
+2019-09-06 05:57:35.986 +01:00 [DBG] No PKCE used.
+2019-09-06 05:57:35.987 +01:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-09-06 05:57:35.988 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 05:57:37.920 +01:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-09-06 05:57:37.985 +01:00 [DBG] Start authorize request protocol validation
+2019-09-06 05:57:37.985 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 05:57:37.986 +01:00 [DBG] Checking for PKCE parameters
+2019-09-06 05:57:37.986 +01:00 [DBG] No PKCE used.
+2019-09-06 05:57:37.986 +01:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-09-06 05:57:37.996 +01:00 [INF] {"SubjectId":"joe","ClientId":"mvc","RequestedScopes":["openid"],"GrantedScopes":["openid"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HLPIGQTSCOVO:00000003","TimeStamp":"2019-09-06T04:57:37.0000000Z","ProcessId":9305,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2019-09-06 05:57:38.044 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 05:57:38.049 +01:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-09-06 05:57:38.051 +01:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-09-06 05:57:38.051 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-09-06 05:57:38.058 +01:00 [DBG] Start authorize callback request
+2019-09-06 05:57:38.065 +01:00 [DBG] User in authorize request: joe
+2019-09-06 05:57:38.065 +01:00 [DBG] Start authorize request protocol validation
+2019-09-06 05:57:38.065 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 05:57:38.065 +01:00 [DBG] Checking for PKCE parameters
+2019-09-06 05:57:38.065 +01:00 [DBG] No PKCE used.
+2019-09-06 05:57:38.066 +01:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-09-06 05:57:38.066 +01:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","AllowedRedirectUris":["http://localhost:5002/callback"],"SubjectId":"joe","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"a903b5596c033b1deefd417ae9c08991","Raw":{"client_id":"mvc","response_type":"code","scope":"openid","redirect_uri":"http://localhost:5002/callback","state":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601"},"$type":"AuthorizeRequestValidationLog"}
+2019-09-06 05:57:38.066 +01:00 [DBG] IsActive called from: AuthorizeEndpoint
+2019-09-06 05:57:38.066 +01:00 [DBG] user_consent grant with value: mvc|joe not found in store.
+2019-09-06 05:57:38.066 +01:00 [DBG] Found no prior consent from consent store, consent is required
+2019-09-06 05:57:38.070 +01:00 [INF] User consented to scopes: ["openid"]
+2019-09-06 05:57:38.072 +01:00 [DBG] User indicated to remember consent for scopes: ["openid"]
+2019-09-06 05:57:38.075 +01:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: joe
+2019-09-06 05:57:38.088 +01:00 [DBG] Creating Authorization Code Flow response.
+2019-09-06 05:57:38.110 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","Endpoint":"Authorize","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"code","TokenValue":"****c373","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCOVO:00000004","TimeStamp":"2019-09-06T04:57:38.0000000Z","ProcessId":9305,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 05:57:38.112 +01:00 [DBG] Authorize endpoint response
+{"SubjectId":"joe","ClientId":"mvc","RedirectUri":"http://localhost:5002/callback","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","Scope":"openid","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-09-06 05:59:33.646 +01:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-09-06 05:59:33.646 +01:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-09-06 05:59:33.647 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-09-06 05:59:33.647 +01:00 [DBG] Start authorize request
+2019-09-06 05:59:33.647 +01:00 [DBG] User in authorize request: joe
+2019-09-06 05:59:33.648 +01:00 [DBG] Start authorize request protocol validation
+2019-09-06 05:59:33.648 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 05:59:33.648 +01:00 [DBG] Checking for PKCE parameters
+2019-09-06 05:59:33.648 +01:00 [DBG] No PKCE used.
+2019-09-06 05:59:33.648 +01:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-09-06 05:59:33.649 +01:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","AllowedRedirectUris":["http://localhost:5002/callback"],"SubjectId":"joe","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"a903b5596c033b1deefd417ae9c08991","Raw":{"client_id":"mvc","response_type":"code","scope":"openid","redirect_uri":"http://localhost:5002/callback","state":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601"},"$type":"AuthorizeRequestValidationLog"}
+2019-09-06 05:59:33.649 +01:00 [DBG] IsActive called from: AuthorizeEndpoint
+2019-09-06 05:59:33.662 +01:00 [DBG] Consent found in consent store is same as current request, consent is not required
+2019-09-06 05:59:33.662 +01:00 [DBG] Creating Authorization Code Flow response.
+2019-09-06 05:59:33.663 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","Endpoint":"Authorize","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"code","TokenValue":"****8e5e","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCOVO:00000005","TimeStamp":"2019-09-06T04:59:33.0000000Z","ProcessId":9305,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 05:59:33.665 +01:00 [DBG] Authorize endpoint response
+{"SubjectId":"joe","ClientId":"mvc","RedirectUri":"http://localhost:5002/callback","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","Scope":"openid","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-09-06 05:59:52.102 +01:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-09-06 05:59:52.109 +01:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-09-06 05:59:52.109 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-09-06 05:59:52.116 +01:00 [DBG] Start token request.
+2019-09-06 05:59:52.125 +01:00 [DBG] Start client validation
+2019-09-06 05:59:52.131 +01:00 [DBG] Start parsing Basic Authentication secret
+2019-09-06 05:59:52.131 +01:00 [DBG] Parser found secret: BasicAuthenticationSecretParser
+2019-09-06 05:59:52.132 +01:00 [DBG] Secret id found: mvc
+2019-09-06 05:59:52.132 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 05:59:52.142 +01:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-09-06 05:59:52.143 +01:00 [DBG] Client validation success
+2019-09-06 05:59:52.144 +01:00 [INF] {"ClientId":"mvc","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLPIGQTSCOVQ:00000001","TimeStamp":"2019-09-06T04:59:52.0000000Z","ProcessId":9305,"LocalIpAddress":"127.0.0.1:5000","RemoteIpAddress":"127.0.0.1","$type":"ClientAuthenticationSuccessEvent"}
+2019-09-06 05:59:52.152 +01:00 [DBG] Start token request validation
+2019-09-06 05:59:52.166 +01:00 [DBG] Start validation of authorization code token request
+2019-09-06 05:59:52.180 +01:00 [DBG] IsActive called from: AuthorizationCodeValidation
+2019-09-06 05:59:52.180 +01:00 [DBG] Validation of authorization code token request success
+2019-09-06 05:59:52.182 +01:00 [INF] Token request validation success, {"ClientId":"mvc","ClientName":"MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"aa90f52b1aeda6ba1286ee4d2cf3f736c88fb899cef9d8a02c5a6adb527e8e5e","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"authorization_code","redirect_uri":"http://localhost:5002/callback","code":"aa90f52b1aeda6ba1286ee4d2cf3f736c88fb899cef9d8a02c5a6adb527e8e5e"},"$type":"TokenRequestValidationLog"}
+2019-09-06 05:59:52.195 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 05:59:52.206 +01:00 [DBG] Getting claims for access token for client: mvc
+2019-09-06 05:59:52.206 +01:00 [DBG] Getting claims for access token for subject: joe
+2019-09-06 05:59:52.210 +01:00 [DBG] Get profile called for subject joe from client MVC Client with claim types [] via ClaimsProviderAccessToken
+2019-09-06 05:59:52.211 +01:00 [DBG] Issued claims: []
+2019-09-06 05:59:52.310 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 05:59:52.318 +01:00 [DBG] Getting claims for identity token for subject: joe and client: mvc
+2019-09-06 05:59:52.318 +01:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-09-06 05:59:52.333 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****NRHw","$type":"Token"},{"TokenType":"access_token","TokenValue":"****JCrw","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCOVQ:00000001","TimeStamp":"2019-09-06T04:59:52.0000000Z","ProcessId":9305,"LocalIpAddress":"127.0.0.1:5000","RemoteIpAddress":"127.0.0.1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 05:59:52.335 +01:00 [DBG] Token request success.
+2019-09-06 06:00:56.613 +01:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-09-06 06:00:56.616 +01:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-09-06 06:00:56.616 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-09-06 06:00:56.616 +01:00 [DBG] Start authorize request
+2019-09-06 06:00:56.617 +01:00 [DBG] User in authorize request: joe
+2019-09-06 06:00:56.618 +01:00 [DBG] Start authorize request protocol validation
+2019-09-06 06:00:56.618 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:00:56.619 +01:00 [DBG] Checking for PKCE parameters
+2019-09-06 06:00:56.619 +01:00 [DBG] No PKCE used.
+2019-09-06 06:00:56.620 +01:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-09-06 06:00:56.621 +01:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","AllowedRedirectUris":["http://localhost:5002/callback"],"SubjectId":"joe","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"a903b5596c033b1deefd417ae9c08991","Raw":{"client_id":"mvc","response_type":"code","scope":"openid","redirect_uri":"http://localhost:5002/callback","state":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601"},"$type":"AuthorizeRequestValidationLog"}
+2019-09-06 06:00:56.621 +01:00 [DBG] IsActive called from: AuthorizeEndpoint
+2019-09-06 06:00:56.622 +01:00 [DBG] Consent found in consent store is same as current request, consent is not required
+2019-09-06 06:00:56.622 +01:00 [DBG] Creating Authorization Code Flow response.
+2019-09-06 06:00:56.624 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","Endpoint":"Authorize","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"code","TokenValue":"****231e","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCOVO:00000006","TimeStamp":"2019-09-06T05:00:56.0000000Z","ProcessId":9305,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 06:00:56.624 +01:00 [DBG] Authorize endpoint response
+{"SubjectId":"joe","ClientId":"mvc","RedirectUri":"http://localhost:5002/callback","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","Scope":"openid","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-09-06 06:01:43.738 +01:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-09-06 06:01:43.739 +01:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-09-06 06:01:43.739 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-09-06 06:01:43.739 +01:00 [DBG] Start authorize request
+2019-09-06 06:01:43.740 +01:00 [DBG] User in authorize request: joe
+2019-09-06 06:01:43.740 +01:00 [DBG] Start authorize request protocol validation
+2019-09-06 06:01:43.740 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:01:43.740 +01:00 [DBG] Checking for PKCE parameters
+2019-09-06 06:01:43.741 +01:00 [DBG] No PKCE used.
+2019-09-06 06:01:43.741 +01:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-09-06 06:01:43.742 +01:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","AllowedRedirectUris":["http://localhost:5002/callback"],"SubjectId":"joe","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"a903b5596c033b1deefd417ae9c08991","Raw":{"client_id":"mvc","response_type":"code","scope":"openid","redirect_uri":"http://localhost:5002/callback","state":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601"},"$type":"AuthorizeRequestValidationLog"}
+2019-09-06 06:01:43.742 +01:00 [DBG] IsActive called from: AuthorizeEndpoint
+2019-09-06 06:01:43.742 +01:00 [DBG] Consent found in consent store is same as current request, consent is not required
+2019-09-06 06:01:43.742 +01:00 [DBG] Creating Authorization Code Flow response.
+2019-09-06 06:01:43.743 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","Endpoint":"Authorize","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"code","TokenValue":"****1c44","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCOVO:00000007","TimeStamp":"2019-09-06T05:01:43.0000000Z","ProcessId":9305,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 06:01:43.743 +01:00 [DBG] Authorize endpoint response
+{"SubjectId":"joe","ClientId":"mvc","RedirectUri":"http://localhost:5002/callback","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","Scope":"openid","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-09-06 06:03:41.084 +01:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-09-06 06:03:41.085 +01:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-09-06 06:03:41.085 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-09-06 06:03:41.086 +01:00 [DBG] Start authorize request
+2019-09-06 06:03:41.086 +01:00 [DBG] User in authorize request: joe
+2019-09-06 06:03:41.086 +01:00 [DBG] Start authorize request protocol validation
+2019-09-06 06:03:41.086 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:03:41.087 +01:00 [DBG] Checking for PKCE parameters
+2019-09-06 06:03:41.087 +01:00 [DBG] No PKCE used.
+2019-09-06 06:03:41.087 +01:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-09-06 06:03:41.087 +01:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","AllowedRedirectUris":["http://localhost:5002/callback"],"SubjectId":"joe","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"a903b5596c033b1deefd417ae9c08991","Raw":{"client_id":"mvc","response_type":"code","scope":"openid","redirect_uri":"http://localhost:5002/callback","state":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601"},"$type":"AuthorizeRequestValidationLog"}
+2019-09-06 06:03:41.088 +01:00 [DBG] IsActive called from: AuthorizeEndpoint
+2019-09-06 06:03:41.088 +01:00 [DBG] Consent found in consent store is same as current request, consent is not required
+2019-09-06 06:03:41.089 +01:00 [DBG] Creating Authorization Code Flow response.
+2019-09-06 06:03:41.089 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","Endpoint":"Authorize","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"code","TokenValue":"****f58e","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCOVO:00000008","TimeStamp":"2019-09-06T05:03:41.0000000Z","ProcessId":9305,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 06:03:41.090 +01:00 [DBG] Authorize endpoint response
+{"SubjectId":"joe","ClientId":"mvc","RedirectUri":"http://localhost:5002/callback","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","Scope":"openid","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-09-06 06:03:55.483 +01:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-09-06 06:03:55.484 +01:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-09-06 06:03:55.484 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-09-06 06:03:55.484 +01:00 [DBG] Start token request.
+2019-09-06 06:03:55.501 +01:00 [DBG] Start client validation
+2019-09-06 06:03:55.502 +01:00 [DBG] Start parsing Basic Authentication secret
+2019-09-06 06:03:55.502 +01:00 [DBG] Parser found secret: BasicAuthenticationSecretParser
+2019-09-06 06:03:55.502 +01:00 [DBG] Secret id found: mvc
+2019-09-06 06:03:55.503 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:03:55.503 +01:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-09-06 06:03:55.503 +01:00 [DBG] Client validation success
+2019-09-06 06:03:55.503 +01:00 [INF] {"ClientId":"mvc","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLPIGQTSCOVS:00000001","TimeStamp":"2019-09-06T05:03:55.0000000Z","ProcessId":9305,"LocalIpAddress":"127.0.0.1:5000","RemoteIpAddress":"127.0.0.1","$type":"ClientAuthenticationSuccessEvent"}
+2019-09-06 06:03:55.504 +01:00 [DBG] Start token request validation
+2019-09-06 06:03:55.504 +01:00 [ERR] Grant type is missing, {"ClientId":"mvc","ClientName":"MVC Client","GrantType":null,"Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"    grant_type":"authorization_code","redirect_uri":"http://localhost:5002/callback","code":"560f6836aea0befd44eb18ed980df5a34b09f14cad3372b3525a109509b6f58e"},"$type":"TokenRequestValidationLog"}
+2019-09-06 06:03:55.505 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":null,"Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLPIGQTSCOVS:00000001","TimeStamp":"2019-09-06T05:03:55.0000000Z","ProcessId":9305,"LocalIpAddress":"127.0.0.1:5000","RemoteIpAddress":"127.0.0.1","$type":"TokenIssuedFailureEvent"}
+2019-09-06 06:04:11.304 +01:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-09-06 06:04:11.304 +01:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-09-06 06:04:11.304 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-09-06 06:04:11.305 +01:00 [DBG] Start token request.
+2019-09-06 06:04:11.305 +01:00 [DBG] Start client validation
+2019-09-06 06:04:11.305 +01:00 [DBG] Start parsing Basic Authentication secret
+2019-09-06 06:04:11.305 +01:00 [DBG] Parser found secret: BasicAuthenticationSecretParser
+2019-09-06 06:04:11.305 +01:00 [DBG] Secret id found: mvc
+2019-09-06 06:04:11.305 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:04:11.306 +01:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-09-06 06:04:11.306 +01:00 [DBG] Client validation success
+2019-09-06 06:04:11.306 +01:00 [INF] {"ClientId":"mvc","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLPIGQTSCOVT:00000001","TimeStamp":"2019-09-06T05:04:11.0000000Z","ProcessId":9305,"LocalIpAddress":"127.0.0.1:5000","RemoteIpAddress":"127.0.0.1","$type":"ClientAuthenticationSuccessEvent"}
+2019-09-06 06:04:11.306 +01:00 [DBG] Start token request validation
+2019-09-06 06:04:11.307 +01:00 [DBG] Start validation of authorization code token request
+2019-09-06 06:04:11.307 +01:00 [DBG] IsActive called from: AuthorizationCodeValidation
+2019-09-06 06:04:11.307 +01:00 [DBG] Validation of authorization code token request success
+2019-09-06 06:04:11.308 +01:00 [INF] Token request validation success, {"ClientId":"mvc","ClientName":"MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"560f6836aea0befd44eb18ed980df5a34b09f14cad3372b3525a109509b6f58e","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"authorization_code","redirect_uri":"http://localhost:5002/callback","code":"560f6836aea0befd44eb18ed980df5a34b09f14cad3372b3525a109509b6f58e"},"$type":"TokenRequestValidationLog"}
+2019-09-06 06:04:11.308 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:04:11.308 +01:00 [DBG] Getting claims for access token for client: mvc
+2019-09-06 06:04:11.309 +01:00 [DBG] Getting claims for access token for subject: joe
+2019-09-06 06:04:11.309 +01:00 [DBG] Get profile called for subject joe from client MVC Client with claim types [] via ClaimsProviderAccessToken
+2019-09-06 06:04:11.309 +01:00 [DBG] Issued claims: []
+2019-09-06 06:04:11.323 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:04:11.324 +01:00 [DBG] Getting claims for identity token for subject: joe and client: mvc
+2019-09-06 06:04:11.324 +01:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-09-06 06:04:11.338 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****TEfg","$type":"Token"},{"TokenType":"access_token","TokenValue":"****Kh9A","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCOVT:00000001","TimeStamp":"2019-09-06T05:04:11.0000000Z","ProcessId":9305,"LocalIpAddress":"127.0.0.1:5000","RemoteIpAddress":"127.0.0.1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 06:04:11.339 +01:00 [DBG] Token request success.
+2019-09-06 06:05:54.054 +01:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-09-06 06:05:54.055 +01:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-09-06 06:05:54.056 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-09-06 06:05:54.056 +01:00 [DBG] Start authorize request
+2019-09-06 06:05:54.056 +01:00 [DBG] User in authorize request: joe
+2019-09-06 06:05:54.056 +01:00 [DBG] Start authorize request protocol validation
+2019-09-06 06:05:54.057 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:05:54.057 +01:00 [DBG] Checking for PKCE parameters
+2019-09-06 06:05:54.057 +01:00 [DBG] No PKCE used.
+2019-09-06 06:05:54.058 +01:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-09-06 06:05:54.059 +01:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","AllowedRedirectUris":["http://localhost:5002/callback"],"SubjectId":"joe","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"a903b5596c033b1deefd417ae9c08991","Raw":{"client_id":"mvc","response_type":"code","scope":"openid","redirect_uri":"http://localhost:5002/callback","state":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601"},"$type":"AuthorizeRequestValidationLog"}
+2019-09-06 06:05:54.060 +01:00 [DBG] IsActive called from: AuthorizeEndpoint
+2019-09-06 06:05:54.061 +01:00 [DBG] Consent found in consent store is same as current request, consent is not required
+2019-09-06 06:05:54.061 +01:00 [DBG] Creating Authorization Code Flow response.
+2019-09-06 06:05:54.062 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","Endpoint":"Authorize","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"code","TokenValue":"****bbe6","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCOVU:00000001","TimeStamp":"2019-09-06T05:05:54.0000000Z","ProcessId":9305,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 06:05:54.063 +01:00 [DBG] Authorize endpoint response
+{"SubjectId":"joe","ClientId":"mvc","RedirectUri":"http://localhost:5002/callback","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","Scope":"openid","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-09-06 06:06:15.685 +01:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-09-06 06:06:15.685 +01:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-09-06 06:06:15.685 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-09-06 06:06:15.686 +01:00 [DBG] Start token request.
+2019-09-06 06:06:15.686 +01:00 [DBG] Start client validation
+2019-09-06 06:06:15.686 +01:00 [DBG] Start parsing Basic Authentication secret
+2019-09-06 06:06:15.686 +01:00 [DBG] Parser found secret: BasicAuthenticationSecretParser
+2019-09-06 06:06:15.687 +01:00 [DBG] Secret id found: mvc
+2019-09-06 06:06:15.687 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:06:15.687 +01:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-09-06 06:06:15.688 +01:00 [DBG] Client validation success
+2019-09-06 06:06:15.688 +01:00 [INF] {"ClientId":"mvc","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLPIGQTSCOVV:00000001","TimeStamp":"2019-09-06T05:06:15.0000000Z","ProcessId":9305,"LocalIpAddress":"127.0.0.1:5000","RemoteIpAddress":"127.0.0.1","$type":"ClientAuthenticationSuccessEvent"}
+2019-09-06 06:06:15.688 +01:00 [DBG] Start token request validation
+2019-09-06 06:06:15.689 +01:00 [DBG] Start validation of authorization code token request
+2019-09-06 06:06:15.689 +01:00 [DBG] IsActive called from: AuthorizationCodeValidation
+2019-09-06 06:06:15.689 +01:00 [DBG] Validation of authorization code token request success
+2019-09-06 06:06:15.689 +01:00 [INF] Token request validation success, {"ClientId":"mvc","ClientName":"MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"580f2c0dfc91751221184efa645ffead0ab13333ade7eb190ea1ae6bf675bbe6","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"authorization_code","redirect_uri":"http://localhost:5002/callback","code":"580f2c0dfc91751221184efa645ffead0ab13333ade7eb190ea1ae6bf675bbe6"},"$type":"TokenRequestValidationLog"}
+2019-09-06 06:06:15.690 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:06:15.690 +01:00 [DBG] Getting claims for access token for client: mvc
+2019-09-06 06:06:15.690 +01:00 [DBG] Getting claims for access token for subject: joe
+2019-09-06 06:06:15.690 +01:00 [DBG] Get profile called for subject joe from client MVC Client with claim types [] via ClaimsProviderAccessToken
+2019-09-06 06:06:15.691 +01:00 [DBG] Issued claims: []
+2019-09-06 06:06:15.710 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:06:15.711 +01:00 [DBG] Getting claims for identity token for subject: joe and client: mvc
+2019-09-06 06:06:15.711 +01:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-09-06 06:06:15.727 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****bmXg","$type":"Token"},{"TokenType":"access_token","TokenValue":"****3Z6g","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCOVV:00000001","TimeStamp":"2019-09-06T05:06:15.0000000Z","ProcessId":9305,"LocalIpAddress":"127.0.0.1:5000","RemoteIpAddress":"127.0.0.1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 06:06:15.727 +01:00 [DBG] Token request success.
+2019-09-06 06:06:46.435 +01:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-09-06 06:06:46.437 +01:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-09-06 06:06:46.438 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-09-06 06:06:46.439 +01:00 [DBG] Start authorize request
+2019-09-06 06:06:46.439 +01:00 [DBG] User in authorize request: joe
+2019-09-06 06:06:46.440 +01:00 [DBG] Start authorize request protocol validation
+2019-09-06 06:06:46.440 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:06:46.440 +01:00 [DBG] Checking for PKCE parameters
+2019-09-06 06:06:46.440 +01:00 [DBG] No PKCE used.
+2019-09-06 06:06:46.441 +01:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-09-06 06:06:46.441 +01:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","AllowedRedirectUris":["http://localhost:5002/callback"],"SubjectId":"joe","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"a903b5596c033b1deefd417ae9c08991","Raw":{"client_id":"mvc","response_type":"code","scope":"openid","redirect_uri":"http://localhost:5002/callback","state":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601"},"$type":"AuthorizeRequestValidationLog"}
+2019-09-06 06:06:46.442 +01:00 [DBG] IsActive called from: AuthorizeEndpoint
+2019-09-06 06:06:46.442 +01:00 [DBG] Consent found in consent store is same as current request, consent is not required
+2019-09-06 06:06:46.442 +01:00 [DBG] Creating Authorization Code Flow response.
+2019-09-06 06:06:46.443 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","Endpoint":"Authorize","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"code","TokenValue":"****fa08","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCOVU:00000002","TimeStamp":"2019-09-06T05:06:46.0000000Z","ProcessId":9305,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 06:06:46.444 +01:00 [DBG] Authorize endpoint response
+{"SubjectId":"joe","ClientId":"mvc","RedirectUri":"http://localhost:5002/callback","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","Scope":"openid","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-09-06 06:06:54.383 +01:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-09-06 06:06:54.383 +01:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-09-06 06:06:54.384 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-09-06 06:06:54.384 +01:00 [DBG] Start token request.
+2019-09-06 06:06:54.384 +01:00 [DBG] Start client validation
+2019-09-06 06:06:54.384 +01:00 [DBG] Start parsing Basic Authentication secret
+2019-09-06 06:06:54.384 +01:00 [DBG] Parser found secret: BasicAuthenticationSecretParser
+2019-09-06 06:06:54.384 +01:00 [DBG] Secret id found: mvc
+2019-09-06 06:06:54.385 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:06:54.385 +01:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-09-06 06:06:54.385 +01:00 [DBG] Client validation success
+2019-09-06 06:06:54.385 +01:00 [INF] {"ClientId":"mvc","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLPIGQTSCP00:00000001","TimeStamp":"2019-09-06T05:06:54.0000000Z","ProcessId":9305,"LocalIpAddress":"127.0.0.1:5000","RemoteIpAddress":"127.0.0.1","$type":"ClientAuthenticationSuccessEvent"}
+2019-09-06 06:06:54.385 +01:00 [DBG] Start token request validation
+2019-09-06 06:06:54.385 +01:00 [DBG] Start validation of authorization code token request
+2019-09-06 06:06:54.386 +01:00 [DBG] IsActive called from: AuthorizationCodeValidation
+2019-09-06 06:06:54.386 +01:00 [DBG] Validation of authorization code token request success
+2019-09-06 06:06:54.386 +01:00 [INF] Token request validation success, {"ClientId":"mvc","ClientName":"MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"236fedb532efa72b03cd4079691d1bc08aa51bc101b87a5adb514f44bf5dfa08","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"authorization_code","redirect_uri":"http://localhost:5002/callback","code":"236fedb532efa72b03cd4079691d1bc08aa51bc101b87a5adb514f44bf5dfa08"},"$type":"TokenRequestValidationLog"}
+2019-09-06 06:06:54.386 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:06:54.386 +01:00 [DBG] Getting claims for access token for client: mvc
+2019-09-06 06:06:54.387 +01:00 [DBG] Getting claims for access token for subject: joe
+2019-09-06 06:06:54.387 +01:00 [DBG] Get profile called for subject joe from client MVC Client with claim types [] via ClaimsProviderAccessToken
+2019-09-06 06:06:54.387 +01:00 [DBG] Issued claims: []
+2019-09-06 06:06:54.401 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:06:54.402 +01:00 [DBG] Getting claims for identity token for subject: joe and client: mvc
+2019-09-06 06:06:54.402 +01:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-09-06 06:06:54.416 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****Ee2Q","$type":"Token"},{"TokenType":"access_token","TokenValue":"****gOng","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCP00:00000001","TimeStamp":"2019-09-06T05:06:54.0000000Z","ProcessId":9305,"LocalIpAddress":"127.0.0.1:5000","RemoteIpAddress":"127.0.0.1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 06:06:54.416 +01:00 [DBG] Token request success.
+2019-09-06 06:07:45.429 +01:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-09-06 06:07:45.435 +01:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-09-06 06:07:45.436 +01:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-09-06 06:07:45.436 +01:00 [DBG] Start authorize request
+2019-09-06 06:07:45.436 +01:00 [DBG] User in authorize request: joe
+2019-09-06 06:07:45.436 +01:00 [DBG] Start authorize request protocol validation
+2019-09-06 06:07:45.436 +01:00 [DBG] client configuration validation for client mvc succeeded.
+2019-09-06 06:07:45.436 +01:00 [DBG] Checking for PKCE parameters
+2019-09-06 06:07:45.437 +01:00 [DBG] No PKCE used.
+2019-09-06 06:07:45.437 +01:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-09-06 06:07:45.437 +01:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","AllowedRedirectUris":["http://localhost:5002/callback"],"SubjectId":"joe","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"a903b5596c033b1deefd417ae9c08991","Raw":{"client_id":"mvc","response_type":"code","scope":"openid","redirect_uri":"http://localhost:5002/callback","state":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601"},"$type":"AuthorizeRequestValidationLog"}
+2019-09-06 06:07:45.438 +01:00 [DBG] IsActive called from: AuthorizeEndpoint
+2019-09-06 06:07:45.438 +01:00 [DBG] Consent found in consent store is same as current request, consent is not required
+2019-09-06 06:07:45.439 +01:00 [DBG] Creating Authorization Code Flow response.
+2019-09-06 06:07:45.440 +01:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/callback","Endpoint":"Authorize","SubjectId":"joe","Scopes":"openid","GrantType":"authorization_code","Tokens":[{"TokenType":"code","TokenValue":"****4a63","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLPIGQTSCOVU:00000003","TimeStamp":"2019-09-06T05:07:45.0000000Z","ProcessId":9305,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-09-06 06:07:45.441 +01:00 [DBG] Authorize endpoint response
+{"SubjectId":"joe","ClientId":"mvc","RedirectUri":"http://localhost:5002/callback","State":"state-296bc9a0-a2a2-4a57-be1a-d0e2fd9bb601","Scope":"openid","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}

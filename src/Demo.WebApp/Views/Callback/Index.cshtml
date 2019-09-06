@@ -1,7 +1,26 @@
-﻿@{
-    ViewData["Title"] = "Redirected";
+﻿@model CallbackRequest
+@{
+    ViewData["Title"] = "Callback";
 }
 
-<div class="text-center">
-    <h1>Hello World!</h1>
-</div>
+<ul>
+    <li>Code: @Model.Code</li>
+    <li>Scope: @Model.Scope</li>
+    <li>State: @Model.State/li>
+    <li>Session State: @Model.SessionState</li>
+</ul>
+
+<h2>Run the following in REST Client to get your id/access token:</h2>
+
+<pre>
+<code>
+POST http://localhost:5000/connect/token
+accept: application/json
+authorization: Basic mvc 49C1A7E1-0C79-4A89-A3D6-A37998FB86B0
+content-type: application/x-www-form-urlencoded
+
+grant_type=authorization_code
+&redirect_uri=http%3A%2F%2Flocalhost%3A5002/callback
+&code=@Model.Code
+</code>
+</pre>

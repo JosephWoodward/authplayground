@@ -22,8 +22,7 @@ namespace Demo.WebApp.Controllers
         {
             _logger.LogDebug("Callback response", request);
 
-            var code = request.Code;
-
+/*
             var client = new HttpClient();
             var response = await client.RequestAuthorizationCodeTokenAsync(new AuthorizationCodeTokenRequest
             {
@@ -34,8 +33,9 @@ namespace Demo.WebApp.Controllers
                 RedirectUri = "http://localhost:5002/callback",
                 GrantType = "code"
             });
+*/
 
-            return View();
+            return View(request);
         }
     }
 
