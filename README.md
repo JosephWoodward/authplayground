@@ -1,4 +1,4 @@
-# Playground
+# Auth / IdentityServer 4 Playground
 
 ## Client Credentials
 
