@@ -41,7 +41,7 @@ grant_type=authorization_code
 &redirect_uri=http%3A%2F%2Flocalhost%3A5002/callback
 &code={{code}}
 ```
-3. Yay, you've got your access code
+5. Yay, you've got your access code
 
 
 ## Authorisation Code (With PKCE)
