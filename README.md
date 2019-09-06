@@ -2,7 +2,10 @@
 
 ## Client Credentials
 
-Launch IdentityServer
+Steps:
+
+1. Launch IdentityServer
+2. Run this:
 
 ```http
 POST http://localhost:5000/connect/token
@@ -13,9 +16,18 @@ scope=api1
 &grant_type=client_credentials
 ```
 
+3. Yay, you've got your access code
+
 ## Authorisation Code (Without PKCE)
 
-Copy [code from callback](https://github.je-labs.com/joseph-woodward/authplayground/blob/master/src/Demo.WebApp/Controllers/CallbackController.cs#L25) (you'll need to use debugger to get response, or copy it from callback parameters)
+Steps:
+
+1. Launch IdentityServer
+2. Navigate to `http://localhost:5002/login` and login with username `joe` and password `letmein`:
+
+3. Copy [code from callback](https://github.je-labs.com/joseph-woodward/authplayground/blob/master/src/Demo.WebApp/Controllers/CallbackController.cs#L25) (you'll need to use debugger to get response, or copy it from callback parameters)
+
+4. Run the following request (with your code replaced):
 
 ```http
 @code = bbbb4252b14be519fb7b2dcc82fc922c6fae646810097fb33526ef26a4c40cea
@@ -29,6 +41,8 @@ grant_type=authorization_code
 &redirect_uri=http%3A%2F%2Flocalhost%3A5002/callback
 &code={{code}}
 ```
+3. Yay, you've got your access code
+
 
 ## Authorisation Code (With PKCE)
 
