@@ -56,7 +56,7 @@ namespace Demo.AuthServer
                     AllowedScopes = { "api1" }
                 },
 
-                // MVC client using hybrid flow
+                // MVC client using code
                 new Client
                 {
                     ClientId = "mvc",

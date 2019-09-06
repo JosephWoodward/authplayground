@@ -6,6 +6,12 @@ namespace Demo.WebApp.Controllers
     {
         public IActionResult Index()
         {
+            /*
+             Notes:
+             Notice how there's no mention of grant types yet, that comes after when exchanging 'code' for token.
+             OAuth Spec says redirect_uri is optional (https://tools.ietf.org/html/rfc6749#section-4.1.1),
+             but t appears that IdentityServer seems to enforce it?
+            */
             var url =
                 "http://localhost:5000/connect/authorize?" +
                 "client_id=mvc" +
