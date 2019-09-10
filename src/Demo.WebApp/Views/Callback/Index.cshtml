@@ -1,4 +1,5 @@
-﻿@model CallbackRequest
+﻿@using Demo.WebApp.Controllers
+@model CallbackRequest
 @{
     ViewData["Title"] = "Callback";
 }
@@ -12,6 +13,8 @@
 
 <h2>Run the following in REST Client to get your id/access token:</h2>
 
+<h3>Without PKCE:</h3>
+
 <pre>
 <code>
 POST http://localhost:5000/connect/token
@@ -21,6 +24,23 @@ content-type: application/x-www-form-urlencoded
 
 grant_type=authorization_code
 &redirect_uri=http%3A%2F%2Flocalhost%3A5002/callback
+&code=@Model.Code
+</code>
+</pre>
+
+<h3>With Plain/SHA256 PKCE:</h3>
+<a href="https://tools.ietf.org/html/rfc7636#section-4.6">RFC</a>
+
+<pre>
+<code>
+POST http://localhost:5000/connect/token
+accept: application/json
+authorization: Basic mvcpkce 49C1A7E1-0C79-4A89-A3D6-A37998FB86B0
+content-type: application/x-www-form-urlencoded
+
+grant_type=authorization_code
+&redirect_uri=http%3A%2F%2Flocalhost%3A5002/callback
+&code_verifier=@PkceCodes.CodeVerifier
 &code=@Model.Code
 </code>
 </pre>

@@ -1,3 +1,4 @@
+using Demo.WebApp.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.WebApp.Models
